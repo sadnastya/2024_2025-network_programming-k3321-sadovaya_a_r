@@ -14,7 +14,7 @@ Date of create: 25.03.2025
 
 Date of finished: 25.03.2025
 
-# Лабораторная работ №1 "Лабораторная работа №1 "Установка CHR и Ansible, настройка VPN""
+# Лабораторная работ №1 "Установка CHR и Ansible, настройка VPN"
 
 ## Цель:
 Целью данной работы является развертывание виртуальной машины на базе платформы Selectel с установленной системой контроля конфигураций Ansible и установка CHR в VirtualBox
@@ -79,7 +79,7 @@ explicit-exit-notify 1
 
 Была полученя следующая схема взаимодействия устройств:
 
-![]()
+![schema](./images/schema.png)
 
 Подключение к OpenVPN в MicroTik:
 
@@ -88,9 +88,11 @@ explicit-exit-notify 1
 Пинги внутри туннеля между клиентом и сервером:
 
 SERVER --> CLIENT
+
 ![server_to_client](./images/ping_server_to_client.png)
 
 CLIENT --> SERVER
+
 ![client_to_server](./images/ping_client_to_server.png)
 
 
