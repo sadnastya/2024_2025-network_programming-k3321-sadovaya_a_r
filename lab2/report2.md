@@ -54,7 +54,7 @@ ansible_user=admin
 
 ![start2](./images/playbook_start2.png)
 
-6. Проверка локальной связанности и конфигурации на миркротиках:
+6. Проверка локальной связанности и конфигурации на микротиках:
 
 Роутер 1 10.10.10.5(10.8.0.2)
 
@@ -69,9 +69,9 @@ ansible_user=admin
 ![get_conf](./images/get_config.png)
 
 
-![Конфигурация 1](./router1_configuration.json)
+[Конфигурация 1](./router1_configuration.json)
 
-![Конфигурация 2](./router2_configuration.json)
+[Конфигурация 2](./router2_configuration.json)
 
 
 
