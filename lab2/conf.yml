@@ -1,0 +1,16 @@
+- name: Gather CHR Config
+  hosts: routers
+  gather_facts: false
+  tasks:
+
+  tasks:
+    - name: Gather facts
+      community.routeros.facts:
+        gather_subset: all
+      register: chr_facts
+
+    - name: Save config to json
+      copy:
+        content: "{{ chr_facts | to_nice_json }}"
+        dest: "{{ inventory_hostname }}_configuration.json"
+

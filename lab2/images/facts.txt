@@ -1,0 +1,57 @@
+ok: [router1] => {
+    "ansible_net_ospf_instance": {
+        "v2inst": {
+            "name": "v2inst",
+            "router-id": "10.10.10.5",
+            "version": "2",
+            "vrf": "main"
+        }
+    }
+}
+ok: [router2] => {
+    "ansible_net_ospf_instance": {
+        "v2inst": {
+            "name": "v2inst",
+            "router-id": "10.10.10.15",
+            "version": "2",
+            "vrf": "main"
+        }
+    }
+}
+
+
+
+
+ok: [router1] => {
+    "ansible_net_ospf_neighbor": {
+        "v2inst": {
+            "address": "10.8.0.3",
+            "area": "bbone",
+            "bdr": "0.0.0.0",
+            "dr": "0.0.0.0",
+            "instance": "v2inst",
+            "priority": "128",
+            "router-id": "10.10.10.15",
+            "state": "Init",
+            "state-changes": "1",
+            "timeout": "34s"
+        }
+    }
+}
+ok: [router2] => {
+    "ansible_net_ospf_neighbor": {
+        "v2inst": {
+            "address": "10.8.0.2",
+            "area": "bbone",
+            "bdr": "0.0.0.0",
+            "dr": "0.0.0.0",
+            "instance": "v2inst",
+            "priority": "128",
+            "router-id": "10.10.10.5",
+            "state": "Init",
+            "state-changes": "1",
+            "timeout": "36s"
+        }
+    }
+}
+
